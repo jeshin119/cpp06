@@ -13,7 +13,7 @@ class ScalarConverter{
 		ScalarConverter&	operator=(const ScalarConverter& rhs);
 
 	public:
-		static void converter(std::string input);
+		static void	converter(std::string input);
 
 		class	InvaildInputException:public std::exception{
 			private:
