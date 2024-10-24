@@ -4,8 +4,10 @@ RM := rm -f
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 DBG = -g -fsanitize=address
 SRCS := main.cpp\
-		ScalarConverter.cpp
-HEADERS := ScalarConverter.hpp
+		Data.cpp\
+		Serializer.cpp
+HEADERS := Data.hpp\
+			Serializer.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
