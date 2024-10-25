@@ -14,12 +14,14 @@ $(NAME) : $(OBJS)
 
 d : $(SRCS) $(HEADERS)
 	$(CXX) $(DBG) $(SRCS) 
+test :
+	bash test.sh > out 2>&1
 
 %.o: %.cpp $(HEADERS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean :
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) out
 
 fclean : clean
 	$(RM) $(NAME)
