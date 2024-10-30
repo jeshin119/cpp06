@@ -97,7 +97,7 @@ static void	checkInput(std::string input){
 void	ft_stoc(std::string& input){
 	//char
 	if (isprint(input[0]))
-		std::cout<<"char: "<<static_cast<char>(input[0])<<"\n";
+		std::cout<<"char: '"<<static_cast<char>(input[0])<<"'\n";
 	else
 		std::cout<<"char: Non displayable\n";
 	//int
@@ -112,7 +112,7 @@ void	ft_stoi(std::string& input){
 	ll tmp;
 	//convert string to long long type
 	try{
-		tmp = std::stoll(input);
+		tmp = std::strtoll(input.c_str(),0,10);
 	}catch(std::exception& e){
 		std::cerr<<"\e[0;31mError: "<<e.what()<<"\e[0;m\n";
 		return ;
@@ -123,7 +123,7 @@ void	ft_stoi(std::string& input){
 	else if (!isprint(tmp))
 		std::cout<<"char: Non displayable\n";
 	else
-		std::cout<<"char: "<<static_cast<char>(tmp)<<"\n";
+		std::cout<<"char: '"<<static_cast<char>(tmp)<<"'\n";
 	//int
 	if (tmp != static_cast<int>(tmp))
 		std::cout<<"int: Overflow\n";
@@ -139,7 +139,7 @@ void	ft_stof(std::string input){
 	double tmp;
 	//convert string to long long type
 	try{
-		tmp = std::stod(input);
+		tmp = std::strtod(input.c_str(),0);
 	}catch(std::exception& e){
 		std::cerr<<"\e[0;31mError: "<<e.what()<<"\e[0;m\n";
 		return ;
@@ -151,7 +151,7 @@ void	ft_stof(std::string input){
 	}else if (!isprint(tmp)){
 		std::cout<<"char: Non displayable\n";
 	}else{
-		std::cout<<"char: "<<static_cast<char>(tmp)<<"\n";
+		std::cout<<"char: '"<<static_cast<char>(tmp)<<"'\n";
 	}
 	//int
 	if (static_cast<long long>(tmp) != static_cast<int>(tmp)){
@@ -168,7 +168,7 @@ void	ft_stod(std::string input){
 
 	//convert string to long long type
 	try{
-		tmp = std::stod(input);
+		tmp = std::strtod(input.c_str(),0);
 	}catch(std::exception& e){
 		std::cerr<<"\e[0;31mError: "<<e.what()<<"\e[0;m\n";
 		return ;
@@ -180,7 +180,7 @@ void	ft_stod(std::string input){
 	else if (!isprint(static_cast<char>(tmp)))
 		std::cout<<"char: Non displayable\n";
 	else
-		std::cout<<"char: "<<static_cast<char>(tmp)<<"\n";
+		std::cout<<"char: '"<<static_cast<char>(tmp)<<"'\n";
 	//int
 	if (static_cast<long long>(tmp) != static_cast<int>(tmp))
 		std::cout<<"int: Overflow\n";

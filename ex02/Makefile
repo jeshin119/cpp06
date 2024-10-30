@@ -3,15 +3,8 @@ CXX := c++
 RM := rm -f
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 DBG = -g -fsanitize=address
-SRCS := main.cpp\
-		Base.cpp\
-		A.cpp\
-		B.cpp\
-		C.cpp
+SRCS := main.cpp
 HEADERS := Base.hpp\
-		A.hpp\
-		B.hpp\
-		C.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

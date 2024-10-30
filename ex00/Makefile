@@ -1,4 +1,4 @@
-NAME := a.out
+NAME := convert
 CXX := c++
 RM := rm -f
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
